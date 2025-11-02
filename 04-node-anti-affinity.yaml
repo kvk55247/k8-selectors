@@ -8,11 +8,11 @@ spec:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
         - matchExpressions:
-          - key: hardware
-            operator: NotIn
-            values:
-            - gpu
-       
+            - key: hardware
+              operator: NotIn
+              values:
+                - gpu
+        
   containers:
   - name: with-node-affinity
     image: nginx
