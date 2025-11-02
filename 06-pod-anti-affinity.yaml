@@ -19,15 +19,15 @@ metadata:
     purpose: pod-demo
 spec:
   affinity:
-    podAntiAffinity:
-      requiredDuringSchedulingIgnoredDuringExecution:
-      - labelSelector:
-           matchExpressions:
-            - key: app
-              operator: In
-              values:
-              - pod-1
-        topologyKey: "kubernetes.io/hostname"
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - store
+            topologyKey: "kubernetes.io/hostname"
   containers:
   - name: pod-2
     image: nginx
