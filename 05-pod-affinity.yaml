@@ -19,7 +19,7 @@ metadata:
     purpose: pod-demo
 spec:
   affinity:
-        podAntiAffinity:
+        podAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
           - labelSelector:
               matchExpressions:
